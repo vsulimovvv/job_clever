@@ -168,7 +168,21 @@
     <a class="mobile-menu__social" href="#"> vkontakte </a>
   </div>
   <!-- Mobile Menu -->
-
+  <form class="header-search">
+    <input class="header-search__input" type="text" placeholder="Поиск" />
+    <svg class="header-search__icon">
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+    <button
+      class="header-search__close"
+      type="button"
+      aria-label="Закрыть поиск"
+    >
+      <svg>
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+  </form>
   <div class="header__top">
     <div class="container">
       <div class="header__top-inner">
@@ -245,11 +259,11 @@
             </ul>
             <ul class="header-tools">
               <li class="header-tools__item">
-                <a class="header-tools__link" href="#">
+                <button class="header-tools__link search-btn" type="button">
                   <svg>
                     <use xlink:href="img/sprite.svg#search"></use>
                   </svg>
-                </a>
+                </button>
               </li>
               <li class="header-tools__item">
                 <a class="header-tools__link" href="#">
@@ -333,7 +347,7 @@
       <address class="contacts__address">
         <div class="contacts__item">
           <span class="contacts__name">Телефон:</span>
-          <a class="contacts__link" href="tel:+79124456630">
+          <a class="contacts__link-phone" href="tel:+79124456630">
             +7 (912) 445-66-30
           </a>
         </div>
@@ -344,7 +358,7 @@
         <div class="contacts__offices">
           <div class="contacts__office">
             <span class="contacts__office-name">Улица 1 Мая 81, БЦ Север</span>
-            <div class="contacts__map map">
+            <div class="contacts__map map" id="map">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A64ad4b31f5030a40bdc64fcc8c953d1dc95968659f33dfdfab88334b650283e7&amp;source=constructor"
                 width="500"
@@ -353,7 +367,7 @@
             </div>
           </div>
           <div class="contacts__office">
-            <span class="contacts__office-name">Улица 1 Мая 81, БЦ Север</span>
+            <span class="contacts__office-name">Улица 1 Мая 86, ТЦ Советник</span>
             <div class="contacts__map map">
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A64ad4b31f5030a40bdc64fcc8c953d1dc95968659f33dfdfab88334b650283e7&amp;source=constructor"
@@ -573,6 +587,11 @@
 
 <!-- fancybox -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- <script
+  src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+  type="text/javascript"
+></script> -->
 
 <!-- JS -->
 <script src="js/main.min.js"></script>

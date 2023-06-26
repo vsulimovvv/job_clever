@@ -168,7 +168,21 @@
     <a class="mobile-menu__social" href="#"> vkontakte </a>
   </div>
   <!-- Mobile Menu -->
-
+  <form class="header-search">
+    <input class="header-search__input" type="text" placeholder="Поиск" />
+    <svg class="header-search__icon">
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+    <button
+      class="header-search__close"
+      type="button"
+      aria-label="Закрыть поиск"
+    >
+      <svg>
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+  </form>
   <div class="header__top">
     <div class="container">
       <div class="header__top-inner">
@@ -245,11 +259,11 @@
             </ul>
             <ul class="header-tools">
               <li class="header-tools__item">
-                <a class="header-tools__link" href="#">
+                <button class="header-tools__link search-btn" type="button">
                   <svg>
                     <use xlink:href="img/sprite.svg#search"></use>
                   </svg>
-                </a>
+                </button>
               </li>
               <li class="header-tools__item">
                 <a class="header-tools__link" href="#">
@@ -341,25 +355,25 @@
                   <img src="img/product/1.jpg" alt="Слайд №1" />
                 </li>
                 <li class="swiper-slide slider-nav__slide">
-                  <img src="img/product/1.jpg" alt="Слайд №1" />
+                  <img src="img/product/2.jpg" alt="Слайд №1" />
+                </li>
+                <li class="swiper-slide slider-nav__slide">
+                  <img src="img/product/3.jpg" alt="Слайд №1" />
+                </li>
+                <li class="swiper-slide slider-nav__slide">
+                  <img src="img/product/4.jpg" alt="Слайд №1" />
+                </li>
+                <li class="swiper-slide slider-nav__slide">
+                  <img src="img/product/5.jpg" alt="Слайд №1" />
                 </li>
                 <li class="swiper-slide slider-nav__slide">
                   <img src="img/product/1.jpg" alt="Слайд №1" />
                 </li>
                 <li class="swiper-slide slider-nav__slide">
-                  <img src="img/product/1.jpg" alt="Слайд №1" />
+                  <img src="img/product/2.jpg" alt="Слайд №1" />
                 </li>
                 <li class="swiper-slide slider-nav__slide">
-                  <img src="img/product/1.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="img/product/1.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="img/product/1.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="img/product/1.jpg" alt="Слайд №1" />
+                  <img src="img/product/3.jpg" alt="Слайд №1" />
                 </li>
               </ul>
             </div>
@@ -477,14 +491,14 @@
               <input
                 class="checkbox-colors__input"
                 type="radio"
-                name="size"
+                name="color"
                 checked
               />
               <span class="checkbox-colors__icon"></span>
             </label>
 
             <label class="checkbox-colors checkbox-colors--black">
-              <input class="checkbox-colors__input" type="radio" name="size" />
+              <input class="checkbox-colors__input" type="radio" name="color" />
               <span class="checkbox-colors__icon"></span>
             </label>
           </div>
@@ -508,7 +522,7 @@
               <span class="checkbox__text">XS</span>
             </label>
             <label class="checkbox">
-              <input class="checkbox__input" type="radio" name="size" />
+              <input class="checkbox__input" type="radio" name="size" checked />
               <span class="checkbox__icon"></span>
               <span class="checkbox__text">S</span>
             </label>
@@ -557,7 +571,7 @@
             </button>
           </div>
           <span class="product-info__price product-info__price--new">
-            3 500 ₽
+            3 500 руб
           </span>
         </div>
 
@@ -566,7 +580,7 @@
             Добавить в корзину
           </button>
           <button class="product-info__btn btn btn--border" href="#">
-            Добавить в избранные
+            Сохранить в избранные
           </button>
         </div>
       </div>
@@ -596,7 +610,9 @@
         </li>
         <li class="product-specs__item">
           <div class="product-specs__left">Состав:</div>
-          <div class="product-specs__right">68% хлопок, 27% полиэстер, 5% эластан</div>
+          <div class="product-specs__right">
+            68% хлопок, 27% полиэстер, 5% эластан
+          </div>
         </li>
         <li class="product-specs__item">
           <div class="product-specs__left">Страна бренда:</div>
@@ -615,8 +631,7 @@
           <div class="product-specs__right">48 - 50 см</div>
         </li>
         <li class="product-specs__item">
-          <div class="product-specs__left">Ширина рукава вверху
-          </div>
+          <div class="product-specs__left">Ширина рукава вверху</div>
           <div class="product-specs__right">20 - 23 см</div>
         </li>
       </ul>
@@ -807,14 +822,14 @@
         </li>
       </ul>
       <div class="swiper-pagination"></div>
-      <button class="swiper-button-next" type="button" aria-label="Следующий">
-        <svg>
-          <use xlink:href="img/sprite.svg#chevron"></use>
-        </svg>
-      </button>
       <button class="swiper-button-prev" type="button" aria-label="Предыдущий">
         <svg>
-          <use xlink:href="img/sprite.svg#chevron"></use>
+          <use xlink:href="img/sprite.svg#slider-right"></use>
+        </svg>
+      </button>
+      <button class="swiper-button-next" type="button" aria-label="Следующий">
+        <svg>
+          <use xlink:href="img/sprite.svg#slider-right"></use>
         </svg>
       </button>
     </div>
@@ -995,6 +1010,11 @@
 
 <!-- fancybox -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- <script
+  src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+  type="text/javascript"
+></script> -->
 
 <!-- JS -->
 <script src="js/main.min.js"></script>

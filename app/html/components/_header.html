@@ -80,7 +80,21 @@
     <a class="mobile-menu__social" href="#"> vkontakte </a>
   </div>
   <!-- Mobile Menu -->
-
+  <form class="header-search">
+    <input class="header-search__input" type="text" placeholder="Поиск" />
+    <svg class="header-search__icon">
+      <use xlink:href="img/sprite.svg#search"></use>
+    </svg>
+    <button
+      class="header-search__close"
+      type="button"
+      aria-label="Закрыть поиск"
+    >
+      <svg>
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
+  </form>
   <div class="header__top">
     <div class="container">
       <div class="header__top-inner">
@@ -157,11 +171,11 @@
             </ul>
             <ul class="header-tools">
               <li class="header-tools__item">
-                <a class="header-tools__link" href="#">
+                <button class="header-tools__link search-btn" type="button">
                   <svg>
                     <use xlink:href="img/sprite.svg#search"></use>
                   </svg>
-                </a>
+                </button>
               </li>
               <li class="header-tools__item">
                 <a class="header-tools__link" href="#">

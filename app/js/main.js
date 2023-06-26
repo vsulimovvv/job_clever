@@ -1,4 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
+  // var myMap = new ymaps.Map('map', {
+  //   zoom: 12,
+  //   center: [59.93772, 30.313622],
+  //   controls: ['default', 'routeButtonControl'],
+  // });
+
   // * ===== Accordion
   const toggleAccordion = (accordionControl, accordionContent, accordion) => {
     const filters = document.querySelectorAll(accordionControl);
@@ -96,18 +102,23 @@ window.addEventListener('DOMContentLoaded', () => {
   (function fixedHeader() {
     function scrollHeader() {
       const nav = document.querySelector('header');
+      const headerSearch = document.querySelector('.header-search');
       if (this.scrollY >= 150) {
         nav.classList.add('scroll-header');
+        headerSearch.classList.add('scroll-header');
       } else {
         nav.classList.remove('scroll-header');
+        headerSearch.classList.remove('scroll-header');
       }
     }
     window.addEventListener('scroll', scrollHeader);
     // ! Change
     function changeBg() {
       const header = document.querySelector('header');
+      const headerSearch = document.querySelector('.header-search');
       if (window.pageYOffset >= 150) {
         header.classList.add('scroll-header');
+        headerSearch.classList.add('scroll-header');
       }
     }
     changeBg();
@@ -193,6 +204,23 @@ window.addEventListener('DOMContentLoaded', () => {
       overlay.classList.remove('active');
       body.classList.remove('no-scroll');
     });
+  })();
+
+  // * ===== Show Search
+  (function showSearch() {
+    const menuBtn = document.querySelector('.search-btn');
+    const menu = document.querySelector('.header-search');
+    const menuCloseBtn = document.querySelector('.header-search__close');
+
+    if (menuBtn) {
+      menuBtn.addEventListener('click', (e) => {
+        menu.classList.toggle('active');
+      });
+
+      menuCloseBtn.addEventListener('click', (e) => {
+        menu.classList.remove('active');
+      });
+    }
   })();
 
   //   // * ===== Modal
